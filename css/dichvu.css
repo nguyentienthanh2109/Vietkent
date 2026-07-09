@@ -113,68 +113,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
-.about-banner {
-  height: 350px;
-
-  background: url(/img/banner_gioithieu.jpg) center center;
-
-  background-size: cover;
-}
-.about-container .banner-left h1 {
-  padding-top: 20px;
-}
-.overlay {
-  width: 100%;
-
-  height: 100%;
-
-  background: rgba(0, 40, 90, 0.55);
-}
-
-.banner-content {
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-}
-
-.banner-left {
-  width: 650px;
-  padding-top: 50px;
-  color: #ffffff;
-}
-
-.banner-left h1 {
-  font-size: 35px;
-
-  margin-bottom: 25px;
-}
-
-.banner-left span {
-  color: #23a7ff;
-}
-
-.banner-left p {
-  font-size: 20px;
-
-  line-height: 30px;
-
-  margin-bottom: 35px;
-}
-
-.breadcrumb {
-  padding-top: 30px;
-  margin: 10px;
-  font-size: 18px;
-}
-
-.breadcrumb a {
-  color: #0b74d8;
-
-  text-decoration: none;
-}
 .title h2 {
   text-align: center;
   font-size: 40px;
