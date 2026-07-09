@@ -117,7 +117,7 @@ body {
 
 .about-banner {
   height: 350px;
-  background: url(/img/banner_gioithieu.jpg) center center;
+  background: url(../img/banner_gioithieu.jpg) center center;
   background-size: cover;
 }
 .about-container .banner-left h1 {
