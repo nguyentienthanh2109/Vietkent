@@ -106,93 +106,57 @@ nav a:hover {
 /* Banner */
 .slider {
   position: relative;
-
   width: 100%;
-  height: 300px;
-
+  height: 350px;
   overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .slides {
-  position: relative;
-
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .slide {
   position: absolute;
-
-  inset: 0;
-
+  width: 100%;
+  height: 100%;
   opacity: 0;
-
-  transition: opacity 0.9s ease;
+  transition: opacity 0.8s ease;
+  z-index: 1;
 }
 
 .slide.active {
   opacity: 1;
-
   z-index: 2;
 }
 
 .slide img {
   width: 100%;
-
+  height: 100%;
   object-fit: cover;
 
   transform: scale(1);
-
-  transition: 7s;
+  transition: transform 5s linear;
 }
 
 .slide.active img {
   transform: scale(1.08);
 }
 
-/*==================================================
-            OVERLAY
-==================================================*/
-
-.slide::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.15)
-  );
-
-  z-index: 1;
-}
-
-/*==================================================
-            BANNER CONTENT
-==================================================*/
+/*   CONTENT BANNER    */
 
 .banner1,
 .banner2,
 .banner3 {
   position: absolute;
-
   top: 50%;
-
-  left: 10%;
-
   transform: translateY(-50%);
-
-  width: 42%;
-
-  color: white;
-
-  z-index: 5;
+  z-index: 100;
 
   opacity: 0;
-
-  transition: 1s;
+  transition: 0.8s;
 }
 
 .slide.active .banner1,
@@ -201,154 +165,96 @@ nav a:hover {
   opacity: 1;
 }
 
+.banner1 {
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 .banner2 {
-  left: 50%;
-
-  width: 40%;
-
-  color: #111;
+  margin-left: 300px;
+  transform: translate(-50%, -50%);
+  color: black;
 }
 
 .banner3 {
-  color: white;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  color: #5e9dfa;
 }
 
 .banner1 h1,
 .banner2 h1,
 .banner3 h1 {
-  font-size: 56px;
-
-  line-height: 1.2;
-
-  margin-bottom: 25px;
-
-  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.banner1 h1,
+.banner2 h1 {
+  margin-left: 50px;
 }
 
 .banner1 p,
 .banner2 p,
 .banner3 p {
-  font-size: 26px;
-
-  line-height: 1.8;
-
-  margin-bottom: 40px;
-
-  font-weight: 400;
+  font-size: 22px;
+  margin: 20px 0;
+  text-align: center;
 }
-
-.banner-btn {
-  display: inline-block;
-
-  padding: 15px 36px;
-
-  background: #0b74d8;
-
-  color: #fff;
-
-  border-radius: 35px;
-
-  font-weight: 600;
-
-  transition: 0.3s;
-}
-
-.banner-btn:hover {
-  background: #0056b3;
-
-  transform: translateY(-4px);
-}
-
-/*==================================================
-            PREV NEXT
-==================================================*/
 
 .prev,
 .next {
   position: absolute;
-
   top: 50%;
-
   transform: translateY(-50%);
-
   width: 55px;
-
   height: 55px;
-
   border: none;
-
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.92);
-
-  color: #111;
-
-  font-size: 30px;
-
   cursor: pointer;
-
+  font-size: 32px;
   transition: 0.3s;
-
-  z-index: 20;
+  z-index: 999;
 }
 
 .prev {
-  left: 35px;
+  left: 30px;
 }
 
 .next {
-  right: 35px;
+  right: 30px;
 }
 
 .prev:hover,
 .next:hover {
   background: #0b74d8;
-
   color: white;
-
-  transform: translateY(-50%) scale(1.08);
 }
-
-/*==================================================
-                DOTS
-==================================================*/
 
 .dots {
   position: absolute;
-
-  bottom: 28px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  display: flex;
-
-  gap: 12px;
-
-  z-index: 30;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
 }
 
 .dot {
-  width: 14px;
-
-  height: 14px;
-
+  width: 15px;
+  height: 15px;
+  display: inline-block;
   border-radius: 50%;
-
+  margin: 0 6px;
   background: white;
-
   cursor: pointer;
-
-  transition: 0.35s;
+  transition: 0.3s;
 }
 
 .dot.active {
   background: #0b74d8;
-
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
-
 .features {
   width: 100%;
   background: #c6c6c6;
@@ -756,6 +662,37 @@ footer {
 .footer-bottom a {
   text-decoration: none;
   color: #0d88e6;
+}
+.zalo-btn {
+  position: fixed;
+
+  right: 30px;
+  bottom: 100px;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+  z-index: 999;
+
+  transition: 0.3s;
+}
+
+.zalo-btn img {
+  width: 42px;
+}
+
+.zalo-btn:hover {
+  transform: scale(1.1);
 }
 .top {
   position: fixed;
